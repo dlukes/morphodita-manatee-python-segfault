@@ -35,6 +35,8 @@ RUN curl -sLo manatee.tgz $manatee_url
 RUN tar xzf manatee.tgz
 RUN mv manatee-open-* manatee
 WORKDIR /manatee
+COPY manatee_swig.patch .
+RUN patch -p1 <manatee_swig.patch
 RUN ./configure --with-pcre PYTHON=/usr/local/bin/python3
 RUN make
 RUN make DESTDIR=/tmp install

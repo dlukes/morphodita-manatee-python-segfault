@@ -1,0 +1,15 @@
+diff -ru a/api/manatee.i b/api/manatee.i
+--- a/api/manatee.i	2019-10-31 14:00:04.000000000 +0100
++++ b/api/manatee.i	2020-03-02 12:06:19.889649482 +0100
+@@ -3,6 +3,11 @@
+
+ %module manatee
+
++// prevent collisions with other SWIG modules
++%begin %{
++#define SWIG_TYPE_TABLE manatee
++%}
++
+ // prevent colisions with wmap
+ #define SwigPyIterator manatee_SwigPyIterator
+ 

@@ -13,6 +13,15 @@ cat <<'EOF' >&2
 
 
 
-[33mTODO: Is Manatee also affected by segfaults when imported after
-MorphoDiTa or NameTag? If so, which operations trigger them?[0m
+[33mNOTE: This branch has had the fix in manatee_swig.patch applied so
+the segfaults mentioned in the comments highlighted in red don't happen
+anymore. Ideally, MorphoDiTa and NameTag should also be patched in a
+similar way, but since we're pulling them from PyPI post-SWIG, we won't
+bother and we'll just demonstrate the simplest, quickest fix here.
+
+Give credit where credit is due: it was Milan Straka who figured out the
+fix, for details see:
+
+- <https://github.com/ufal/morphodita/issues/14#issuecomment-592997122>
+- <http://www.swig.org/Doc4.0/Modules.html#Modules_nn2>[0m
 EOF
