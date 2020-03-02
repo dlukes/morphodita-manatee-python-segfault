@@ -1,15 +1,14 @@
-diff -ru a/api/manatee.i b/api/manatee.i
---- a/api/manatee.i	2019-10-31 14:00:04.000000000 +0100
-+++ b/api/manatee.i	2020-03-02 12:06:19.889649482 +0100
-@@ -3,6 +3,11 @@
-
- %module manatee
-
-+// prevent collisions with other SWIG modules
+diff -ru a/api/common.i b/api/common.i
+--- a/api/common.i	2019-03-15 20:06:28.000000000 +0100
++++ b/api/common.i	2020-03-02 15:08:22.406193768 +0100
+@@ -1,6 +1,10 @@
+ /* -*- C++ -*- */
+ //  Copyright (c) 1999-2016  Pavel Rychly, Milos Jakubicek
+ 
 +%begin %{
 +#define SWIG_TYPE_TABLE manatee
 +%}
 +
- // prevent colisions with wmap
- #define SwigPyIterator manatee_SwigPyIterator
- 
+ %{
+ //  Copyright (c) 1999-2016  Pavel Rychly, Milos Jakubicek
+ #include "concord/concord.hh"
